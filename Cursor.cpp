@@ -58,6 +58,17 @@ void Insert(ElementType X, List L, Position P)
 	CursorSpace[P].Next = TmpCell;
 }
 
+void InitializeCursorSpace(void)
+{
+	for (int i = 0; i < SpaceSize; ++i)
+	{
+		if (i == SpaceSize - 1)
+			CursorSpace[i].Next = 0;
+		else
+			CursorSpace[i].Next = i + 1;
+	}
+}
+
 int main()
 {
 
