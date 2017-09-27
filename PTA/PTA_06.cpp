@@ -70,9 +70,6 @@ int IsSameStructure(Tree R1, Tree R2)
 	if (T1[R1].Left == Null && T2[R2].Left == Null)
 		return IsSameStructure(T1[R1].Right, T2[R2].Right);
 	//
-	//if (T1[R1].Right == Null && T2[R2].Right == Null)
-	//	return IsSameStructure(T1[R1].Left, T2[R2].Left);
-	//
 	if (T1[R1].Left != Null&&T2[R2].Left != Null&&T1[T1[R1].Left].Element == T2[T2[R2].Left].Element)
 		return IsSameStructure(T1[R1].Left, T2[R2].Left) && IsSameStructure(T1[R1].Right, T2[R2].Right);
 	else
